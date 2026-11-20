@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@meijie/fireworks-core — Vanilla JS Demo</title>
+  <style>
+    * { margin: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; background: #05070f; overflow: hidden; font-family: system-ui, sans-serif; }
+    #stage { display: block; width: 100vw; height: 100vh; }
+    .panel {
+      position: fixed; top: 16px; left: 16px; z-index: 10;
+      background: rgba(16, 24, 56, .9); border: 1px solid #2a3a72;
+      border-radius: 10px; padding: 14px; color: #e8eeff; font-size: 13px;
+    }
+    .panel h1 { font-size: 14px; margin: 0 0 10px; }
+    .panel p { color: #93a4cc; font-size: 11px; line-height: 1.6; margin: 10px 0 0; }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; }
+    button {
+      background: #1e2a52; color: #dce6ff; border: 1px solid #3a4d88;
+      border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+    }
+    button:hover { background: #2b3b72; }
+  </style>
+</head>
+<body>
+  <canvas id="stage"></canvas>
+  <div class="panel">
+    <h1>@meijie/fireworks-core</h1>
+    <div class="row">
+      <button data-preset="show">Show</button>
+      <button data-preset="salute">Salute</button>
+      <button data-preset="waterfall">Waterfall</button>
+      <button id="stop">Stop</button>
+    </div>
+    <p>Click anywhere on the canvas to burst at that exact point.<br>No framework. Zero dependencies.</p>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

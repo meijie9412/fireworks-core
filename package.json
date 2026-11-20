@@ -1,0 +1,49 @@
+{
+  "name": "@meijie/fireworks-core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic canvas fireworks engine. Zero dependencies — use it with vanilla JS, Vue, React, Svelte, or any framework.",
+  "main": "./dist/engine.cjs",
+  "module": "./dist/engine.js",
+  "types": "./dist/engine.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/engine.d.ts",
+      "import": "./dist/engine.js",
+      "require": "./dist/engine.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "fireworks",
+    "canvas",
+    "animation",
+    "particle",
+    "engine",
+    "vanilla-js",
+    "framework-agnostic",
+    "烟花",
+    "礼花"
+  ],
+  "scripts": {
+    "build": "FORMAT=es vite build && FORMAT=cjs vite build && cp types/*.d.ts dist/",
+    "test": "vitest run",
+    "dev": "vite --config demo/vite.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meijie9412/fireworks-core.git"
+  },
+  "homepage": "https://github.com/meijie9412/fireworks-core#readme",
+  "bugs": {
+    "url": "https://github.com/meijie9412/fireworks-core/issues"
+  },
+  "author": "meijie",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.5.14",
+    "vitest": "^2.1.9"
+  }
+}
